@@ -1,5 +1,6 @@
 const cells = document.querySelectorAll('.cell')
-let gameIsOn = true
+const moneyDisplay = document.querySelector('h1')
+let money = 0
 appendPurple()
 
 function appendPurple() {
@@ -32,7 +33,8 @@ function appendPurple() {
 cells.forEach((cell, index) => {
     cell.onclick = () => {
         if (cell.querySelector(".active")) {
-            console.log('has');
+            money += 19
+            moneyDisplay.innerHTML = `<h1>Money: ${money}</h1>`
         }
     }
 })
