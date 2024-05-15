@@ -4,7 +4,8 @@ let money = 0
 appendPurple()
 
 function appendPurple() {
-    let rndTime = Math.floor(Math.random() * 2 + 1)
+
+    let rndTime = Math.floor(Math.random() * 1 + 1)
     let rnd = Math.floor(Math.random() * cells.length)
     console.log(rnd)
     cells.forEach((cell, index) => {
@@ -35,6 +36,7 @@ cells.forEach((cell, index) => {
         if (cell.querySelector(".active")) {
             money += 19
             moneyDisplay.innerHTML = `<h1>Money: ${money}</h1>`
+            cell.removeChild(cell.querySelector(".active"));
         }
     }
 })
